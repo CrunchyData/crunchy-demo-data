@@ -1,0 +1,41 @@
+/* wonder things not to display */
+#noprint, .noprint, .response-links #current, .rounded-tabs, 
+.button2, .finder-buttons, #send-help, .oc-sub-hr { 
+	display: none;
+}
+
+.pagebreak { page-break-before: always }
+
+.tab-div3, .wonder-content, .oc-sub-heading {
+	border: none !important;
+}
+
+table .response-form {
+	border: 2px solid #555 !important;
+}
+
+/* results table measure heading links */
+.msr a {
+	color: #000 !important;
+	text-decoration: none !important;
+}
+
+/* template things not to display */
+header, footer, #totop, .socialmediabar {
+	display: none !important;
+}
+
+/* css :after is used to add content after something */
+/* template css adds value of href after all links, not helpful for wonder */
+
+/* don't show href contents for links */
+a[href]:after {
+	content: none !important
+}
+
+/* except for results table notes */
+table.response-notes td a:link:after {
+	content:" (" attr(href) ")" !important;
+	word-wrap: break-word !important;
+	text-decoration: none !important;
+}

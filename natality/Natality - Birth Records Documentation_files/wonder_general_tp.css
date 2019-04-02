@@ -1,0 +1,388 @@
+/* Suggestions
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+vertical-align: baseline;
+}
+*/
+
+/* Suggestions
+
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+vertical-align: baseline;
+}
+*/
+
+
+/* 
+	The moz-focus-inner settings are used by internal FF code to add additional padding to buttons, this removes it
+	The @-moz-document limits these setting to FF, altho can't really see how any other browser would be involved...
+*/
+@-moz-document url-prefix(http://) {
+	button::-moz-focus-inner, input[type="button"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner {
+		padding: 0 !important;
+		border: 0 none !important;
+	}
+}
+
+/* 
+	General resets 
+*/
+.wonder table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	/* Fixes extra padding with <img> in <td>, but causes other problems -- See class lh-zero below */
+	/* line-height: 0;*/
+}
+
+/* don't add ul and li so existing regular lists work */
+.wonder html, body, footer, header, div, tr, th, td, a, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	min-height: 0;
+	line-height: normal;
+	height: auto;
+}
+
+/*
+	"Resets" needed to override template package settings that broke Wonder pages
+*/
+
+.wonder a[name] {
+	text-decoration: none !important;
+	color: #000 !important;
+}
+
+.wonder a[name]:hover {
+	text-decoration: none !important;
+	color: #000 !important;
+}
+
+.wonder hr {
+	height: 2px;
+	border-width: 0;
+	color: #333;
+	background-color: gray;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.wonder input[type="checkbox"] {
+	float: none;
+	margin: 0 4px !important;
+}
+
+.wonder input[type="radio"] {
+	margin: 0 4px !important;
+}
+
+.wonder input[type="text"] {
+	margin: 0;
+	padding: 2px;
+	min-height: 0;
+	line-height: 1.1 /*normal;*/
+	height: auto;
+	width: auto;
+	font-size: 13px;
+}
+
+.wonder input[type=text]:focus {
+	box-shadow: none;
+	outline: 0;
+}
+
+.wonder label {
+	display: inline;
+}
+
+.wonder p {
+	line-height: normal !important;
+}
+
+.wonder pre {
+	border: none !important;
+	background-color: #fff !important;
+	font-family: "courier new", monospace !important;
+	line-height: normal !important;
+	font-weight: normal !important;
+	white-space: pre;
+	display: table;
+}
+
+.wonder select {
+	margin: 0;
+	padding: 1px 0;
+	min-height: 0;
+	line-height: normal;
+	height: auto;
+	font-size: 13px;
+}
+
+.wonder select[disabled] {
+	cursor: text !important;
+}
+
+.wonder textarea {
+	margin: 0;
+	padding: 0;
+	line-height: normal !important;
+}
+
+.wonder textarea[readonly] {
+	cursor: text !important;
+}
+
+.wonder textarea:focus {
+	box-shadow: none;
+	outline: 0;
+}
+
+.wonder ul, .wonder li {
+	line-height: normal;
+	font-size: 13px;
+	font-family: Verdana;
+}
+
+/* Change hidden to visible to see overflow scrollbars */
+#wrapper{overflow-x:visible !important}
+html #wrapper{overflow:visible !important}
+
+
+/*
+	Set line height to 0 on tables that have <img> tags in <td> elements
+	this negates bug that adds extra vertical padding around <img> in <td>, still present in most browsers
+	however, messes up other things, like <br> doesn't do a newline cause line height is 0
+	So, use where needed with caution.
+	If need to reset line-height to default, use lh-normal below
+	line-height also takes a number of different values, see: http://www.w3schools.com/cssref/pr_dim_line-height.asp
+	Thank you, html5
+*/
+.lh-zero {
+	line-height: 0;
+}
+.lh-normal {
+	line-height: normal;
+}
+
+.wonder { line-height: normal !important; }
+.wonder { font-family: Verdana; font-size: 13px; }
+.wonder b { font-family: Verdana; font-size: 13px; }
+.wonder p { font-family: Verdana; font-size: 13px; }
+.wonder label { font-size: 13px; }
+
+
+.wonder a {  font-size: 13px; font-weight: normal; }
+/* a: tags must be in order link, visited, hover, active; see http://meyerweb.com/eric/css/link-specificity.html for info */
+.wonder a:link { color: #073a90 !important}
+.wonder a:visited { color: #073a90 !important }
+.wonder a:hover { color: #a00 !important; text-decoration: underline !important; }
+.wonder a:active { color: #a00 !important; text-decoration: underline !important; }
+
+.wonder h1 { font-family: Verdana; font-size:16pt !important; font-weight: normal; line-height: normal; }
+.wonder h2 { font-family: Verdana; font-size:14pt !important; font-weight: normal; line-height: normal; }
+.wonder h3 { font-family: Verdana; font-size:12pt !important; font-weight: bold; line-height: normal; }
+.wonder h4 { font-family: Verdana; font-size:11pt !important; font-weight: bold; line-height: normal; }
+.wonder h5 { font-family: Verdana; font-size:10pt !important; font-weight: bold; line-height: normal; }
+.wonder h6 { font-family: Verdana; font-size:10pt !important; font-weight: bold; line-height: normal; }
+
+.wonder h1 a { font-family: Verdana; font-size:16pt !important; font-weight: normal; line-height: normal; }
+.wonder h2 a { font-family: Verdana; font-size:14pt !important; font-weight: normal; line-height: normal; }
+.wonder h3 a { font-family: Verdana; font-size:12pt !important; font-weight: bold; line-height: normal; }
+.wonder h4 a { font-family: Verdana; font-size:11pt !important; font-weight: bold; line-height: normal; }
+.wonder h5 a { font-family: Verdana; font-size:10pt !important; font-weight: bold; line-height: normal; }
+.wonder h6 a { font-family: Verdana; font-size:10pt !important; font-weight: bold; line-height: normal; }
+
+/* for times when table display behavior is helpful */
+.wonder .dtable {
+	display: table;
+}
+.wonder .dtrow {
+	display: table-row;
+}
+.wonder .dtcell {
+	display: table-cell;
+}
+
+
+/* TP */
+
+.titlebar h2 {
+	margin: 12px 10px !important;
+}
+
+.titlebar h2 a {
+	margin-right: 30px;
+}
+
+.titlebar h2 a.wonmenu {
+	font-size: 18px;
+	margin-left: 30px;
+	margin-right: 0;
+}
+
+.titlebar .wontitle {
+	margin: 12px 10px !important;
+	color: #fff;
+}
+
+.titlebar .wontitle a {
+	margin-right: 30px;
+	font-size: 24px;
+	color: #fff;
+}
+
+.titlebar .wontitle a.wonmenu {
+	font-size: 18px;
+	margin-left: 30px;
+	margin-right: 0;
+	color: #fff;
+}
+
+/* items pulled from wonder_style_sheet.css */
+.foot1 { font-family: Verdana; font-size:9pt; }
+.foot2 { font-family: Verdana; 
+	font-size:10pt; 
+	color: #000099;
+	padding: 0 0 10px 0;
+	text-align: center;
+}
+.map-territory-border {
+	border-right: #000000 1px solid; border-left: #000000 1px solid;
+	border-top: #000000 1px solid; border-bottom: #000000 1px solid;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------
+	Classes used by help files
+------------------------------------------------------------------------------------------------------------------------ */
+
+.block-center {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.block-left {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.block-right {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.border {
+	border: 1px solid gray;
+}
+
+.border-dark {
+	border: 1px solid #444;
+}
+
+/* use with a <div> to hold contents of a help page */
+/* replaces the old <blockquote> <table> combination */
+.help-contents {
+	width: 95%;
+	margin: 10px auto 20px auto !important;
+}
+
+/* use this class with a <div> to duplicate <blockquote> */
+/* use margin instead of padding to take advantage of margin collapse, like <blockquote> */
+.indent {
+	margin: 15px 40px !important;
+}
+
+/* use with the <hr> that divides content from "last reviewed" and footer */
+/* put the hr after the end of the help-contents div */
+.last-hr {
+	margin: 40px 0 15px 0;
+	height: 2px;
+	border-width: 0;
+	color: #333;
+	background-color: gray;
+}
+
+.nobullet {
+	list-style: none;
+}
+
+.noshade {
+	height: 2px;
+	border-width: 0;
+	color: gray;
+	background-color: gray;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.table-border td { border: 1px solid gray; }
+.table-border th { border: 1px solid gray; }
+
+.table-border-dark td { border: 1px solid #444; }
+.table-border-dark th { border: 1px solid #444; }
+
+.table-pad-2 td { padding: 2px; }
+.table-pad-2 th { padding: 2px; }
+
+.table-pad-3 td { padding: 3px; }
+.table-pad-3 th { padding: 3px; }
+
+.table-pad-4 td { padding: 4px; }
+.table-pad-4 th { padding: 4px; }
+
+.table-pad-5 td { padding: 5px; }
+.table-pad-5 th { padding: 5px; }
+
+.table-pad-6 td { padding: 6px; }
+.table-pad-6 th { padding: 6px; }
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.vertical-bottom {
+	vertical-align: bottom;
+}
+
+.vertical-middle {
+	vertical-align: middle;
+}
+
+.vertical-top {
+	vertical-align: top;
+}

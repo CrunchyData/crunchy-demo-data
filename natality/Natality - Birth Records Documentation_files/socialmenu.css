@@ -1,0 +1,161 @@
+	@media screen and (max-width: 767px) {
+		#socialMediaShareContainer .dd-menu {
+			left: 10px!important;
+			z-index: 9999;
+		}
+
+		/* keep menu from expanding full width in mobile */
+		#socialMediaShareContainer.dd {
+			float: left;
+			z-index: 9999;
+		}
+
+		.dd .dd-toggle {
+			height: 16px!important;
+		}
+	}
+
+	/* dropdown menu styles */
+	.dd {
+		height: 20px;
+	}
+
+	#socialMediaShareContainer.dd img[src$="sm-plus.gif"] {
+		margin-right: 0;
+		vertical-align: top;
+	}
+
+	#socialMediaShareContainer.dd img {
+		margin-right: 5px;
+	}
+
+	#socialMediaContainer.dd li {
+		margin:0!important;
+	}
+
+	.dd i {
+		display: inline-block;
+		float: left;
+		margin-left: -1px;
+		margin-right: 5px;
+	}
+
+	.dd img.twitter {
+		background: #00aced;
+	}
+	.dd img.facebook {
+		background: #3b5998;
+	}
+	.dd img.pinterest {
+		background: #cb2027;
+	}
+	.dd img.linkedin {
+		background: #007fb1;
+	}
+	.dd img.email {
+		background: #dd4b39;
+	}
+	.dd img.digg {
+		background: #14589e;
+	}
+	.dd img.rss {
+		background: #ff8300;
+	}
+	.dd a {
+		display: inline-block;
+		text-decoration: none!important;
+		color: #000!important;
+		float: left;
+	}
+	/* toggle */
+	.dd .dd-toggle {
+		padding: 0;
+		outline: 0!important;
+	}
+	.dd a.dd-toggle:focus {
+		outline: 1px solid orange !important;
+	}
+	/* dropdown */
+	.dd-menu {
+		position: relative;
+		display: none;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		background: #fff;
+		border: 1px solid #e5e5e5;
+		z-index: 9997;
+		width: 175px;
+		left: 162px;
+		top: -8px;
+	}
+
+	#socialMediaContainer.dd .dd-menu {
+		left: 172px;
+		top: -3px;
+	}
+	.dd-menu li {
+		border-bottom: 1px solid #e5e5e5;
+		z-index:9998;
+	}
+	.dd-menu li a {
+		display: block;
+		padding: 5px;
+		z-index: 9999;
+		float: none;
+	}
+	.dd-menu li img {
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+	/* options */
+	.dd-menu .option a {
+		padding: 5px;
+	}
+	.dd-menu .option a:hover {
+		background: #efefef;
+	}
+	/* open */
+	.dd-open .dd-menu {
+		display: block;
+	}
+
+
+	/* overrides app.css styles */
+	a.share_button img {
+		display: none;
+	}
+
+	a.share_button span {
+		display: none;
+	}
+
+	.facebookRecommend,
+	html.esp .facebookRecommend,
+	body.esp .facebookRecommend {
+		background: url('/TemplatePackage/3.0/images/social/facebook-32.png') no-repeat;
+		height: 32px;
+		width: 32px;
+		text-indent: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		display: inline-block;
+		margin-right: 7px;
+	}
+
+	html.esp .twitterTweet,
+	body.esp .twitterTweet,
+	.twitterTweet {
+		background: url('/TemplatePackage/3.0/images/social/twitter-32.png') no-repeat;
+		height: 32px;
+		width: 32px;
+		text-indent: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		display: inline-block;
+		margin-right: 7px;
+	}
+
+	#content-inner #socialMediaContainer {
+		height: 32px;
+	}
