@@ -36,7 +36,8 @@ create table se_details (
 );
 
 -- then import the data
--- \copy se_details from '/home/spousty/git/crunchydemodata/storm_data/data/StormEvents_details-ftp_v1.0_d2018_c20190130.csv' WITH CSV HEADER\copy se_details from '/home/spousty/git/crunchydemodata/storm_data/data/StormEvents_details-ftp_v1.0_d2018_c20190130.csv' WITH CSV HEADER
+-- \copy se_details from '/home/spousty/git/crunchydemodata/storm_data/data/StormEvents_details-ftp_v1.0_d2018_c20190130.csv' WITH CSV HEADER;
+
 
 
 --removed all
@@ -52,7 +53,7 @@ create table se_fatalities (
   fatality_location text
 );
     create index strm_fatal_idx on se_fatalities(event_id);
--- \copy se_fatalities from './StormEvents_fatalities-ftp_v1.0_d2018_c20190130.csv' with CSV HEADER
+-- \copy se_fatalities from './StormEvents_fatalities-ftp_v1.0_d2018_c20190130.csv' with CSV HEADER;
 
 
 create table se_locations (

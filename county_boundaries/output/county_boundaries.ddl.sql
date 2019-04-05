@@ -8,12 +8,6 @@ CREATE TABLE county_geometry
   geoid CHAR(5), -- The GEOID attribute is a concatenation of the state FIPS code followed by the county FIPS code.
   county_name TEXT, -- National Standard Codes (ANSI INCITS 31-2009), Federal Information Processing Series (FIPS) - Counties/County Equivalents
   namelsad TEXT, -- current name and the translated legal/statistical area description for county
---  lsad CHAR(2), -- Current legal/statistical area description code for county
---  classfp CHAR(2), -- Current Federal Information Processing Series (FIPS) class code
---  mtfcc CHAR(5), excluded bc these would all be G4040 =  County or Equivalent Feature
---  csafp CHAR(3), excluded bc these are mostly null
---  cbsafp CHAR(5), excluded bc these are mostly null
---  metdivfp CHAR(5), excluded bc these are mostly null
   funcstat CHAR(1), -- Current functional status
   aland BIGINT,  --area of land in m2
   awater BIGINT, --area of water in m2
