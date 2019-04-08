@@ -66,7 +66,7 @@ create table se_locations (
   location text,
   latitude real,
   longitude real,
-  the_geom geometry(POINT, 4326)
+  the_geom geography(POINT)
 );
 create index selocation_pt_indx on se_locations using gist (the_geom);
 create index selocation_event_indx on se_locations(event_id);

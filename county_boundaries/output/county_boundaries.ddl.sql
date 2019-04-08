@@ -11,8 +11,8 @@ CREATE TABLE county_geometry
   funcstat CHAR(1), -- Current functional status
   aland BIGINT,  --area of land in m2
   awater BIGINT, --area of water in m2
-  interior_pnt geometry(POINT, 4326), --generated from geom in the file
-  the_geom geometry(MULTIPOLYGON,4326) --generated from geom in the file
+  interior_pnt geography(POINT), --generated from geom in the file
+  the_geom geography(MULTIPOLYGON) --generated from geom in the file
 );
 create index countygeom_interiorpt_indx on county_geometry using gist (interior_pnt);
 create index countygeom_the_geom_indx on county_geometry using gist (the_geom);

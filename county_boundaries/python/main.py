@@ -28,7 +28,7 @@ with fiona.open("../shapefile/tl_2018_us_county.shp", "r") as features:
             lon = float(item['properties']['INTPTLON'])
             the_point = Point(lon, lat)
 
-            output.write(dumps(the_point, hex=True, include_srid=True, srid=4326) + ',')
+            output.write(dumps(the_point, hex=True) + ',')
 
             geom = None
             try:
@@ -36,7 +36,7 @@ with fiona.open("../shapefile/tl_2018_us_county.shp", "r") as features:
             except:
                 tempgeom = shape(item['geometry'])
                 geom = MultiPolygon([tempgeom])
-            output.write(dumps(geom, hex=True, include_srid=True, srid=4326))
+            output.write(dumps(geom, hex=True))
 
             output.write('\n')
 
