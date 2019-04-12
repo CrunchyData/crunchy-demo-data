@@ -119,3 +119,6 @@ county_boundaries/.vscode/settings.json
 storm_data/data/StormEvents_locations-ftp_v1.0_d2018_c20190130.csv
 storm_data/output/storm_locations_copy.txt
 /storm_data/data/StormEvents_locations-ftp_v1.0_d2018_c20190130.csv
+/wikipedia/output/wikipedia_copy.txt
+/storm_data/data/StormEvents_details-ftp_v1.0_d2018_c20190130.csv
+/storm_data/data/StormEvents_fatalities-ftp_v1.0_d2018_c20190130.csv
