@@ -114,3 +114,4 @@ venv.bak/
 /county_boundaries/output/county_boundaries_copy.txt
 county_boundaries/.vscode/settings.json
 /county_boundaries/.vscode/
+/natural_events/output/natural_events.csv
