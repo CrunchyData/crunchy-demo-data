@@ -19,6 +19,6 @@ if __name__ == '__main__':
                     lon = float(line['LONGITUDE'])
 
                     the_point = Point(lon, lat)
-                    output.write(dumps(the_point, hex=True, include_srid=True, srid=4326) + '\n')
+                    output.write(dumps(the_point, hex=True) + '\n')
 
     print("done")
