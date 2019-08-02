@@ -122,3 +122,4 @@ storm_data/output/storm_locations_copy.txt
 /wikipedia/output/wikipedia_copy.txt
 /storm_data/data/StormEvents_details-ftp_v1.0_d2018_c20190130.csv
 /storm_data/data/StormEvents_fatalities-ftp_v1.0_d2018_c20190130.csv
+/natural_events/output/natural_events.csv
