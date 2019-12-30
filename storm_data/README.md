@@ -2,9 +2,9 @@
 The data was downloaded from
 ftp://ftp.ncdc.noaa.gov/pub/data/swdi/stormevents/csvfiles/
 
-on Feb 13, 2019
+on Dec 30, 2019
 
-There are 3 files only 1 of which contains location data.
+There are 3 files only 1 of which contains location data. They are just for the calendar year 2018
 
 There are many more years if doing temporal work is desired.
 
