@@ -8,7 +8,7 @@ import pprint
 if __name__ == '__main__':
 
     # read a line from the file
-    with open('../data/StormEvents_locations-ftp_v1.0_d2018_c20190130.csv', 'r' ) as input_file:
+    with open('../data/StormEvents_locations-ftp_v1.0_d2018_c20191217.csv', 'r' ) as input_file:
         csv_file = csv.DictReader(input_file)
         with open("../output/storm_locations_copy.txt", "w") as output:
             for i, line in enumerate(csv_file):

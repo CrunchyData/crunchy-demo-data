@@ -125,3 +125,7 @@ storm_data/output/storm_locations_copy.txt
 /natural_events/output/natural_events.csv
 !/.idea/
 !/crunchy-demo-data.iml
+!/storm_data/data/StormEvents_details-ftp_v1.0_d2018_c20191217.csv
+!/storm_data/data/StormEvents_fatalities-ftp_v1.0_d2018_c20191217.csv
+!/storm_data/data/StormEvents_locations-ftp_v1.0_d2018_c20191217.csv
+!/storm_data/output/storm_locations_copy.txt

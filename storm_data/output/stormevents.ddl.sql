@@ -4,8 +4,9 @@
   -- from BEGIN_YEARMONTH up to and including END_TIME
   -- flood_cause
   -- category
-  -- tor_
+  -- tor_*
   -- from begin_range up to and including end_lon (these are not documented in the data dictionary)
+  -- data_source
 -- The data did not include last_date_modified and last_date_certified
 create table se_details (
     episode_id int,
@@ -36,7 +37,7 @@ create table se_details (
 );
 
 -- then import the data
--- \copy se_details from '/home/spousty/git/crunchydemodata/storm_data/data/StormEvents_details-ftp_v1.0_d2018_c20190130.csv' WITH CSV HEADER;
+-- \copy se_details from './data/StormEvents_details-ftp_v1.0_d2018_c20191217.csv' WITH CSV HEADER;
 
 
 
@@ -53,7 +54,7 @@ create table se_fatalities (
   fatality_location text
 );
     create index strm_fatal_idx on se_fatalities(event_id);
--- \copy se_fatalities from './StormEvents_fatalities-ftp_v1.0_d2018_c20190130.csv' with CSV HEADER;
+-- \copy se_fatalities from './data/StormEvents_fatalities-ftp_v1.0_d2018_c20191217.csv' with CSV HEADER;
 
 
 create table se_locations (
